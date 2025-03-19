@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
+:root {
+    --color: #F0F0D7;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: var(--color);
+}
+
+header {
+    display: flex;
+    position: relative;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+span {
+    font-size: 30px;
+    color: #727D73;
+    font-weight: 700;
+    margin: 0px;
+}
+
+p {
+    font-family: "Merriweather", serif;
+}
+
+h1  {
+    font-family: "Bree Serif", serif;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%);
+    color: #F0F0D7;
+    background-color: #727D73;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 50px;
+}
+
+h2 {
+    font-family: "Bree Serif", serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 0px;
+}
+
+figcaption {
+    font-family: "Bree Serif", serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: #F0F0D7;
+    background-color: #727D73;
+    padding: 10px;
+    border-radius: 8px;
+    width: 100%;
+    margin: 15px 0px;
+}
+
+footer {
+    font-family: "Merriweather", serif;
+    background-color: #727D73;
+    color: #F0F0D7;
+    margin-top: 20px;
+    padding: 5px 0px;
+    
+}
+
+footer p {
+    font-size: 15px;
+    font-weight: 900;
+}
+
+a {
+    align-content: center;
+    text-decoration: none;
+    background-color: #727D73;
+    padding: 5px;
+    border-radius: 8px;
+    width: 30%;
+    height: 50px;
+    margin: 5px;
+    color: #F0F0D7;
+    font-family: "Merriweather", serif;
+    font-size: 20px;
+    font-weight: bold;
+    transition: transform 0.2s, background 0.3s;
+}
+
+a:hover {
+    transform: scale(1.1);
+    background-color: #AAB99A;
+}
+
+#seccion--enlaces{
+    padding: 10px;
+    margin-top: 0px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    height: 100px;
+    width: 90%;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(170, 185, 154, 0.4);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+#seccion--enlaces {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0px;
+}
+
+#koala--izquierda {
+    height: 85vh;
+    width: 50%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+#koala--derecha {
+    height: 85vh;
+    width: 50%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+#parrafo--intro {
+    columns: 2;
+    column-gap: 3em;
+    column-rule: thick solid #AAB99A;
+    text-align: justify;
+    hyphens: auto;
+    padding: 15px 50px 15px 50px;
+    color: black;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+#parrafo1,
+#parrafo2,
+#parrafo3 {
+    text-align: justify;
+    padding: 0px 50px;
+    font-size: 20px;
+    display: block; /* Cambiado de inline a block */
+    margin: 0 auto; /* Centrar los párrafos */
+    max-width: 70%; /* Cambiado de width a max-width para mejor responsividad */
+    hyphens: auto;
+}
+
+#koala--habitad {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: solid 5px #AAB99A;
+    margin-top: 15px;                
+}
+
+#koala--habitad:hover {
+    transform: scale(1.1) translateY(-10px);
+}
+
+#koala--durmiendo {
+    margin-bottom: 15px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: solid 5px #AAB99A; 
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+#koala--durmiendo:hover {
+    transform: rotate(360deg);
+    transition: transform 1s;
+}
+
+/* Estilos para la barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 10px; 
+    height: 10px; 
+}
+
+/* Color de fondo de la barra */
+::-webkit-scrollbar-track {
+    background: #F0F0D7;
+    border-radius: 5px;
+}
+
+/* Color y diseño del "pulgar" (scroll que se mueve) */
+::-webkit-scrollbar-thumb {
+    background: #AAB99A;
+    border-radius: 5px;
+    border: 2px solid #F0F0D7; 
+}
+
+/* Efecto cuando pasas el mouse sobre la barra */
+::-webkit-scrollbar-thumb:hover {
+    background: #727D73;
+}
+
+
+@media (max-width: 768px) {
+    
+    #koala--header {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #koala--izquierda {
+        height: 60vh;
+        width: 100%;
+    }
+
+    #koala--derecha {
+        height: 40vh;
+        width: 100%;
+    }
+    #parrafo1, 
+    #parrafo2, 
+    #parrafo3 {
+        padding: 0px 20px;
+    }
+
+    #parrafo--intro {
+        padding: 15px 25px;
+        font-size: 16px;
+    }
+
+    h1 {
+        top: 50%;
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 10px;
+    }
+
+}
